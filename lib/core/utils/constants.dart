@@ -34,7 +34,7 @@ class Constants {
     Fluttertoast.showToast(
         toastLength: Toast.LENGTH_LONG,
         msg: msg,
-        backgroundColor: color ?? AppColor.primaryColor,
+        backgroundColor: color ?? AppColors.primaryColor,
         gravity: gravity ?? ToastGravity.BOTTOM,
         textColor: Colors.white);
   }
