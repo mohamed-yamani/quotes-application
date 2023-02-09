@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test/config/routes/app_routes.dart';
+import 'package:test/core/utils/app_colors.dart';
 import 'package:test/core/utils/app_strings.dart';
 import 'package:test/core/utils/assets_manager.dart';
 import 'package:test/core/utils/constants.dart';
@@ -16,7 +17,22 @@ class QuoteScreen extends StatefulWidget {
 class _QuoteScreenState extends State<QuoteScreen> {
   Widget _buildBodyContent() {
     return Column(
-      children: const [QuoteContent()],
+      children: [
+        const QuoteContent(),
+        Container(
+          margin: const EdgeInsets.symmetric(vertical: 15),
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              shape: BoxShape.circle, color: AppColors.primaryColor),
+          child: IconButton(
+            onPressed: () {
+              // next quote
+            },
+            icon: const Icon(Icons.arrow_forward_ios,
+                size: 28, color: Colors.white),
+          ),
+        )
+      ],
     );
   }
 
